@@ -16,7 +16,11 @@ namespace SITE
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            //добавляем поддержку контроллеров MVC
+            services.AddControllersWithViews()
+                //совместимость
+                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest)
+                .AddSessionStateTempDataProvider();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,15 +30,16 @@ namespace SITE
             {
                 app.UseDeveloperExceptionPage();
             }
+            //информация об ошибках
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+            //поддержка статичных файлов
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
