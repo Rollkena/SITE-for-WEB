@@ -53,11 +53,20 @@ namespace SITE
                 options.SlidingExpiration = true;
             });
             //настройка куки авторизации
+            
+            services.AddAuthorization(x =>
+            {
+                x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
+            });
+            //настраиваем политику авторизации для Admin area
 
-            services.AddControllersWithViews()
-                //добавляем поддержку контроллеров MVC
-                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest)
+            services.AddControllersWithViews(x =>
+            {
+                x.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
+            }).SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest)
                 .AddSessionStateTempDataProvider();
+                //добавляем поддержку контроллеров MVC
+                
             //совместимость
         }
 
@@ -78,6 +87,7 @@ namespace SITE
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
             //регестрируем маршруты

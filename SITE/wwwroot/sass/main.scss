@@ -60,3 +60,13 @@
 	@import 'layout/banner';
 	@import 'layout/footer';
 	@import 'layout/menu';
+	
+	.div-box{
+		padding: 15px 0;
+		label {
+			display: block;
+		}
+		a{
+			display: block;
+		}
+	}
