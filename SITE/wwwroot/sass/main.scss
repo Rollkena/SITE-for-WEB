@@ -63,10 +63,22 @@
 	
 	.div-box{
 		padding: 15px 0;
+		margin: 20px 20px 20px 20px;
 		label {
 			display: block;
 		}
 		a{
 			display: block;
 		}
+	}
+	.img-block{
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.div-marg {
+		margin: 20px 20px 20px 20px;
+	}
+	.div-cut{
+		margin: 20px 900px 20px 0px;
 	}

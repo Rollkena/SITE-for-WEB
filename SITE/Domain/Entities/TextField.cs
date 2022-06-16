@@ -12,9 +12,9 @@ namespace SITE.Domain.Entities
         public string CodeWord { get; set; }
 
         [Display(Name = "Название страницы (заголовок)")]
-        public override string Title { get; set; } = "Инфорационная страница";
+        public override string Title { get; set; } = "Главная";
 
         [Display(Name = "Содержание страницы")]
-        public override string Text { get; set; } = "Инфорационная страница";
+        public override string Text { get; set; } = "Информационная страница";
     }
 }
