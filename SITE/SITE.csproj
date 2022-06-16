@@ -281,6 +281,45 @@
     <None Include="wwwroot\js\ckeditor\skins\moono-lisa\readme.md" />
     <None Include="wwwroot\js\ckeditor\styles.js" />
     <None Include="wwwroot\js\ckeditor\vendor\promise.js" />
+    <None Include="wwwroot\sass\base\_page.scss" />
+    <None Include="wwwroot\sass\base\_reset.scss" />
+    <None Include="wwwroot\sass\base\_typography.scss" />
+    <None Include="wwwroot\sass\components\_actions.scss" />
+    <None Include="wwwroot\sass\components\_author.scss" />
+    <None Include="wwwroot\sass\components\_blurb.scss" />
+    <None Include="wwwroot\sass\components\_box.scss" />
+    <None Include="wwwroot\sass\components\_button.scss" />
+    <None Include="wwwroot\sass\components\_form.scss" />
+    <None Include="wwwroot\sass\components\_icon.scss" />
+    <None Include="wwwroot\sass\components\_icons.scss" />
+    <None Include="wwwroot\sass\components\_image.scss" />
+    <None Include="wwwroot\sass\components\_list.scss" />
+    <None Include="wwwroot\sass\components\_mini-post.scss" />
+    <None Include="wwwroot\sass\components\_post.scss" />
+    <None Include="wwwroot\sass\components\_posts.scss" />
+    <None Include="wwwroot\sass\components\_row.scss" />
+    <None Include="wwwroot\sass\components\_section.scss" />
+    <None Include="wwwroot\sass\components\_table.scss" />
+    <None Include="wwwroot\sass\layout\_footer.scss" />
+    <None Include="wwwroot\sass\layout\_header.scss" />
+    <None Include="wwwroot\sass\layout\_intro.scss" />
+    <None Include="wwwroot\sass\layout\_main.scss" />
+    <None Include="wwwroot\sass\layout\_menu.scss" />
+    <None Include="wwwroot\sass\layout\_sidebar.scss" />
+    <None Include="wwwroot\sass\layout\_wrapper.scss" />
+    <None Include="wwwroot\sass\libs\_breakpoints.scss" />
+    <None Include="wwwroot\sass\libs\_functions.scss" />
+    <None Include="wwwroot\sass\libs\_html-grid.scss" />
+    <None Include="wwwroot\sass\libs\_mixins.scss" />
+    <None Include="wwwroot\sass\libs\_vars.scss" />
+    <None Include="wwwroot\sass\libs\_vendor.scss" />
+    <None Include="wwwroot\sass\main.scss" />
+    <None Include="wwwroot\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff2" />
   </ItemGroup>
 
 </Project>
