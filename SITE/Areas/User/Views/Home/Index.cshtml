@@ -1,6 +1,6 @@
 ﻿@model IQueryable<ServiceItem>
-@{ 
-    string strTitle = "Панель администратора";
+@{
+    string strTitle = "Личный кабинет";
     ViewBag.Title = strTitle;
 }
 
@@ -12,12 +12,13 @@
         </div>
     </article>
     <article class="post">
-        
+
         <div>
             <div>
                 <h3>Наши услуги</h3>
                 <div class="div-cut">
-                    <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="">Добавить услугу</a>
+                    <a asp-area="Admin" asp-controller="ServiceItems" asp-action="
+                       " asp-route-id="">Добавить услугу</a>
                 </div>
             </div>
             @if (Model.Any())
@@ -41,7 +42,7 @@
                 </div>
             }
         </div>
-        <div >
+        <div>
             <h3>Редактировать страницы сайта</h3>
             <div class="div-cut">
                 <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageIndex">Главная</a>

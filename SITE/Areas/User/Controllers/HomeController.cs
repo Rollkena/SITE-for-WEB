@@ -1,12 +1,13 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using SITE.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using SITE.Domain;
 
-namespace SITE.Controllers
+namespace SITE.Areas.User.Controllers
 {
+    [Area("User")]
     public class HomeController : Controller
     {
         private readonly DataManager dataManager;
@@ -16,12 +17,7 @@ namespace SITE.Controllers
         }
         public IActionResult Index()
         {
-            return View(dataManager.TextFields.GetTextFieldByCodeWord("PageIndex"));
-        }
-        public IActionResult Contacts()
-        {
-            return View(dataManager.TextFields.GetTextFieldByCodeWord("PageContacts"));
+            return View(dataManager.ServiceItems.GetServiceItems());
         }
     }
 }
-
