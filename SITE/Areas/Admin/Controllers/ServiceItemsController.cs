@@ -45,7 +45,7 @@ namespace SITE.Areas.Admin.Controllers
         }
         [HttpPost]
         public IActionResult Delete(Guid id)
-        {
+        { 
             dataManager.ServiceItems.DeleteServiceItem(id);
             return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
         }

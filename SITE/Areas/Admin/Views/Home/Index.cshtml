@@ -32,8 +32,8 @@
                             |
                             <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="@entity.Id">редактировать</a>
                             |
-                            <form style="display:inline-block;" id="from-@entity.Id" asp-area="Admin" asp-controller="ServiceItem" asp-action="Delete" method="post">
-                                <input type="hidden" name="id" value="@entity.Id" />
+                            <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
+                                <input type="hidden" name="id" value="@entity.Id">
                                 <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">удалить</a>
                             </form>
                         </div>
