@@ -10,7 +10,7 @@ using SITE.Domain;
 namespace SITE.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220615200005__initial")]
+    [Migration("20220617004637__initial")]
     partial class _initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,7 @@ namespace SITE.Migrations
                         new
                         {
                             Id = "a8a6af02-703b-4d64-8de0-20e0217d44a1",
-                            ConcurrencyStamp = "2869c346-df3b-4382-872e-9e721f184c58",
+                            ConcurrencyStamp = "20bdd553-b69e-496d-83d0-78cbcd1369c7",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -150,13 +150,13 @@ namespace SITE.Migrations
                         {
                             Id = "01bc6691-e8ec-4932-b6da-1ee1c997aa23",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ed8b5c26-020b-48c1-9c09-68238af95c8b",
+                            ConcurrencyStamp = "edcca904-73b8-4dd3-9680-3e2e84c24f71",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHRbzyljlVao2VAE/GNUStBFk1hcUdH+H9sRqgDXKEwQnWIGUkM9dP21zUi1Xn+Ppw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEJkYNcnQFMQuYKg3CgtPh/Z7liNa5JZ4Jjqjct775N3cbw/Zy5qsLO9ZSZhdipABw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -251,6 +251,49 @@ namespace SITE.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("SITE.Domain.Entities.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaKeywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Post")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subtitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Order");
+                });
+
             modelBuilder.Entity("SITE.Domain.Entities.ServiceItem", b =>
                 {
                     b.Property<Guid>("Id")
@@ -267,6 +310,12 @@ namespace SITE.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MetaTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderText")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Post")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Subtitle")
@@ -309,6 +358,12 @@ namespace SITE.Migrations
                     b.Property<string>("MetaTitle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("OrderText")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Post")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Subtitle")
                         .HasColumnType("nvarchar(max)");
 
@@ -330,24 +385,24 @@ namespace SITE.Migrations
                         {
                             Id = new Guid("82e37966-583d-423f-87e2-c109270a028e"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 6, 15, 20, 0, 5, 15, DateTimeKind.Utc).AddTicks(9337),
-                            Text = "Инфорационная страница",
+                            DateAdded = new DateTime(2022, 6, 17, 0, 46, 37, 567, DateTimeKind.Utc).AddTicks(6809),
+                            Text = "Содержание заполняется администратором",
                             Title = "Главная"
                         },
                         new
                         {
                             Id = new Guid("039d7a74-c56a-493e-88ba-cc22db8b2cff"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 6, 15, 20, 0, 5, 16, DateTimeKind.Utc).AddTicks(662),
-                            Text = "Инфорационная страница",
+                            DateAdded = new DateTime(2022, 6, 17, 0, 46, 37, 567, DateTimeKind.Utc).AddTicks(8099),
+                            Text = "Содержание заполняется администратором",
                             Title = "Наши услуги"
                         },
                         new
                         {
                             Id = new Guid("984d1393-9b74-4958-b281-4f7a08f5308e"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 6, 15, 20, 0, 5, 16, DateTimeKind.Utc).AddTicks(690),
-                            Text = "Инфорационная страница",
+                            DateAdded = new DateTime(2022, 6, 17, 0, 46, 37, 567, DateTimeKind.Utc).AddTicks(8160),
+                            Text = "Содержание заполняется администратором",
                             Title = "Контакты"
                         });
                 });

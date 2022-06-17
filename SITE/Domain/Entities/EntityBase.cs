@@ -34,6 +34,12 @@ namespace SITE.Domain.Entities
         [Display(Name = "SEO метатег Keywords")]
         public string MetaKeywords { get; set; }
 
+        [Display(Name = "Почта")]
+        public virtual string Post { get; set; }
+
+        [Display(Name = "Описание вашего запроса")]
+        public virtual string OrderText { get; set; }
+
         [DataType(DataType.Time)]
         public DateTime DateAdded { get; set; }
 

@@ -1,4 +1,4 @@
-﻿@model IQueryable<ServiceItem>
+﻿@model IQueryable<Order>
 @{
     string strTitle = "Личный кабинет";
     ViewBag.Title = strTitle;
@@ -15,16 +15,15 @@
 
         <div>
             <div>
-                <h3>Наши услуги</h3>
+                <h3>Мои запросы</h3>
                 <div class="div-cut">
-                    <a asp-area="Admin" asp-controller="ServiceItems" asp-action="
-                       " asp-route-id="">Добавить услугу</a>
+                    <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id=""></a>
                 </div>
             </div>
             @if (Model.Any())
             {
                 <div>
-                    @foreach (ServiceItem entity in Model)
+                    @foreach (Order entity in Model)
                     {
                         <div>
                             <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">

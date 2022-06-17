@@ -10,6 +10,7 @@ namespace SITE.Domain
     {
         public ITextFieldsRepository TextFields { get; set; }
         public IServiceItemsRepository ServiceItems { get; set; }
+        public IOrderRepository Order { get; set; }
 
         public DataManager(ITextFieldsRepository textFieldsReposytory, IServiceItemsRepository serviceItemReposytory)
         {
