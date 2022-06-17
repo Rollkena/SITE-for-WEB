@@ -10,7 +10,7 @@ using SITE.Domain;
 namespace SITE.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220617012718__initial")]
+    [Migration("20220617085714__initial")]
     partial class _initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,7 @@ namespace SITE.Migrations
                         new
                         {
                             Id = "a8a6af02-703b-4d64-8de0-20e0217d44a1",
-                            ConcurrencyStamp = "06824728-d5e4-4010-b908-87a934925453",
+                            ConcurrencyStamp = "f6328abe-dcc0-4de6-b68d-e2a778a3fb43",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -150,13 +150,13 @@ namespace SITE.Migrations
                         {
                             Id = "01bc6691-e8ec-4932-b6da-1ee1c997aa23",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6a528d2b-58e4-4f4f-9360-57774892fdf8",
+                            ConcurrencyStamp = "153d88fd-751b-45df-8f23-5c7aa55b1b92",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENjxTfSMQipNGT7BZFJdXvSl+pKDkYTdzNHRjrGKngOSPL1AL8Y37e02HDALgv8wyg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEECE2odI3b7ua6YwL+wFzlc0radG1WYlCR8vgB1UjlwYi4zwUEdqu6Y0BTuaGS8JMw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -291,7 +291,7 @@ namespace SITE.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("SITE.Domain.Entities.ServiceItem", b =>
@@ -385,7 +385,7 @@ namespace SITE.Migrations
                         {
                             Id = new Guid("82e37966-583d-423f-87e2-c109270a028e"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 6, 17, 1, 27, 18, 144, DateTimeKind.Utc).AddTicks(1728),
+                            DateAdded = new DateTime(2022, 6, 17, 8, 57, 14, 526, DateTimeKind.Utc).AddTicks(266),
                             Text = "Содержание заполняется администратором",
                             Title = "Главная"
                         },
@@ -393,7 +393,7 @@ namespace SITE.Migrations
                         {
                             Id = new Guid("039d7a74-c56a-493e-88ba-cc22db8b2cff"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 6, 17, 1, 27, 18, 144, DateTimeKind.Utc).AddTicks(3068),
+                            DateAdded = new DateTime(2022, 6, 17, 8, 57, 14, 526, DateTimeKind.Utc).AddTicks(1547),
                             Text = "Содержание заполняется администратором",
                             Title = "Наши услуги"
                         },
@@ -401,7 +401,7 @@ namespace SITE.Migrations
                         {
                             Id = new Guid("984d1393-9b74-4958-b281-4f7a08f5308e"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 6, 17, 1, 27, 18, 144, DateTimeKind.Utc).AddTicks(3096),
+                            DateAdded = new DateTime(2022, 6, 17, 8, 57, 14, 526, DateTimeKind.Utc).AddTicks(1575),
                             Text = "Содержание заполняется администратором",
                             Title = "Контакты"
                         });

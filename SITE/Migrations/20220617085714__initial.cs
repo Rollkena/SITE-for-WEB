@@ -47,7 +47,7 @@ namespace SITE.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Order",
+                name: "Orders",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -64,7 +64,7 @@ namespace SITE.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Order", x => x.Id);
+                    table.PrimaryKey("PK_Orders", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -219,21 +219,21 @@ namespace SITE.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "a8a6af02-703b-4d64-8de0-20e0217d44a1", "06824728-d5e4-4010-b908-87a934925453", "admin", "ADMIN" });
+                values: new object[] { "a8a6af02-703b-4d64-8de0-20e0217d44a1", "f6328abe-dcc0-4de6-b68d-e2a778a3fb43", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "01bc6691-e8ec-4932-b6da-1ee1c997aa23", 0, "6a528d2b-58e4-4f4f-9360-57774892fdf8", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAENjxTfSMQipNGT7BZFJdXvSl+pKDkYTdzNHRjrGKngOSPL1AL8Y37e02HDALgv8wyg==", null, false, "", false, "admin" });
+                values: new object[] { "01bc6691-e8ec-4932-b6da-1ee1c997aa23", 0, "153d88fd-751b-45df-8f23-5c7aa55b1b92", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEECE2odI3b7ua6YwL+wFzlc0radG1WYlCR8vgB1UjlwYi4zwUEdqu6Y0BTuaGS8JMw==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "TextFields",
                 columns: new[] { "Id", "CodeWord", "DateAdded", "MetaDescription", "MetaKeywords", "MetaTitle", "OrderText", "Post", "Subtitle", "Text", "Title", "TitleImagePath" },
                 values: new object[,]
                 {
-                    { new Guid("82e37966-583d-423f-87e2-c109270a028e"), "PageIndex", new DateTime(2022, 6, 17, 1, 27, 18, 144, DateTimeKind.Utc).AddTicks(1728), null, null, null, null, null, null, "Содержание заполняется администратором", "Главная", null },
-                    { new Guid("039d7a74-c56a-493e-88ba-cc22db8b2cff"), "PageServices", new DateTime(2022, 6, 17, 1, 27, 18, 144, DateTimeKind.Utc).AddTicks(3068), null, null, null, null, null, null, "Содержание заполняется администратором", "Наши услуги", null },
-                    { new Guid("984d1393-9b74-4958-b281-4f7a08f5308e"), "PageContacts", new DateTime(2022, 6, 17, 1, 27, 18, 144, DateTimeKind.Utc).AddTicks(3096), null, null, null, null, null, null, "Содержание заполняется администратором", "Контакты", null }
+                    { new Guid("82e37966-583d-423f-87e2-c109270a028e"), "PageIndex", new DateTime(2022, 6, 17, 8, 57, 14, 526, DateTimeKind.Utc).AddTicks(266), null, null, null, null, null, null, "Содержание заполняется администратором", "Главная", null },
+                    { new Guid("039d7a74-c56a-493e-88ba-cc22db8b2cff"), "PageServices", new DateTime(2022, 6, 17, 8, 57, 14, 526, DateTimeKind.Utc).AddTicks(1547), null, null, null, null, null, null, "Содержание заполняется администратором", "Наши услуги", null },
+                    { new Guid("984d1393-9b74-4958-b281-4f7a08f5308e"), "PageContacts", new DateTime(2022, 6, 17, 8, 57, 14, 526, DateTimeKind.Utc).AddTicks(1575), null, null, null, null, null, null, "Содержание заполняется администратором", "Контакты", null }
                 });
 
             migrationBuilder.InsertData(
@@ -299,7 +299,7 @@ namespace SITE.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Order");
+                name: "Orders");
 
             migrationBuilder.DropTable(
                 name: "ServiceItems");

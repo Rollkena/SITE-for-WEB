@@ -17,6 +17,10 @@ namespace SITE.Areas.User.Controllers
         }
         public IActionResult Index()
         {
+            return View(dataManager.Orders.GetOrders());
+        }
+        public IActionResult IndexServices()
+        {
             return View(dataManager.ServiceItems.GetServiceItems());
         }
     }

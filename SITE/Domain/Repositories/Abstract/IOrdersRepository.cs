@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SITE.Domain.Repositories.Abstract
 {
-    public interface IOrderRepository
+    public interface IOrdersRepository
     {
-        IQueryable<Order> GetOrder();
+        IQueryable<Order> GetOrders();
         Order GetOrderById(Guid id);
         void SaveOrder(Order entity);
         void DeleteOrder(Guid id);

@@ -27,6 +27,7 @@ namespace SITE
 
             services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
             services.AddTransient<IServiceItemsRepository, EFServiceItemsRepository>();
+            services.AddTransient<IOrdersRepository, EFOrdersRepository>();
             services.AddTransient<DataManager>();
             //подключаем новый функционал в качестве сервисов
 

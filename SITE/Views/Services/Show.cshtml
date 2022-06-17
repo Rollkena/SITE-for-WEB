@@ -13,7 +13,12 @@
             @Model.Subtitle
         </h3>
         <div>
-            <img class="left" src="~/images/@Model.TitleImagePath" />
+            <img class="align-center" src="~/images/@Model.TitleImagePath" />
+        </div>
+        <div>
+            <form asp-area="User" asp-controller="Orders" asp-action="Edit" asp-route-id="">
+                <input type="submit" value="Создать запрос" />
+            </form>
         </div>
     </article>
     <article class="post">

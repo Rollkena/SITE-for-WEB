@@ -1,27 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SITE.Domain.Entities;
-using SITE.Domain.Repositories.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SITE.Domain.Repositories.EntityFramework
+namespace SITE.Domain.Repositories.Abstract
 {
-    public class EFOrderRepository : IOrderRepository
+    public class EFOrdersRepository : IOrdersRepository
     {
         private readonly AppDbContext context;
-        public EFOrderRepository(AppDbContext context)
+        public EFOrdersRepository(AppDbContext context)
         {
             this.context = context;
         }
-        public IQueryable<Order> GetOrder()
+        public IQueryable<Order> GetOrders()
         {
-            return context.Order;
+            return context.Orders;
         }
         public Order GetOrderById(Guid id)
         {
-            return context.Order.FirstOrDefault(x => x.Id == id);
+            return context.Orders.FirstOrDefault(x => x.Id == id);
         }
         public void SaveOrder(Order entity)
         {
@@ -33,7 +32,7 @@ namespace SITE.Domain.Repositories.EntityFramework
         }
         public void DeleteOrder(Guid id)
         {
-            context.Order.Remove(new Order() { Id = id });
+            context.Orders.Remove(new Order() { Id = id });
             context.SaveChanges();
         }
     }

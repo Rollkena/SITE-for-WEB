@@ -10,12 +10,13 @@ namespace SITE.Domain
     {
         public ITextFieldsRepository TextFields { get; set; }
         public IServiceItemsRepository ServiceItems { get; set; }
-        public IOrderRepository Order { get; set; }
+        public IOrdersRepository Orders { get; set; }
 
-        public DataManager(ITextFieldsRepository textFieldsReposytory, IServiceItemsRepository serviceItemReposytory)
+        public DataManager(ITextFieldsRepository textFieldsReposytory, IServiceItemsRepository serviceItemReposytory, IOrdersRepository orderRepository)
         {
             TextFields = textFieldsReposytory;
             ServiceItems = serviceItemReposytory;
+            Orders = orderRepository;
         }
     }
 }

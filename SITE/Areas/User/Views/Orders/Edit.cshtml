@@ -1,0 +1,45 @@
+﻿@model Order
+@{
+    string strTitle = "Редактировать запрос";
+    ViewBag.Title = strTitle;
+}
+
+<script src="~/js/ckeditor/ckeditor.js"></script>
+
+<div id="main">
+    <article class="post">
+        <div class="div-box">
+            <h2>@strTitle</h2>
+        </div>
+        <div>
+            <form asp-area="User" asp-controller="Orders" asp-action="Edit" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="DateAdded" />
+
+                <div asp-validation-summary="All"></div>
+                <div class="div-box">
+                    <label asp-for="Post"></label>
+                    <input asp-for="Post" />
+                    <span asp-validation-for="Post"></span>
+                </div>
+                <div class="div-box">
+                    <label asp-for="OrderText"></label>
+                    <textarea asp-for="OrderText"></textarea>
+                    <span asp-validation-for="OrderText"></span>
+                </div>
+                <div class="div-box">
+                    <input type="submit" value="Сохранить" />
+                </div>
+            </form>
+        </div>
+    </article>
+</div>
+
+
+
+<script>
+    window.onload = function() {
+        var newCKEdit = CKEDITOR.replace('@Html.IdFor(x=>x.OrderText)');
+        newCKEdit.updateElement();
+    }
+</script>

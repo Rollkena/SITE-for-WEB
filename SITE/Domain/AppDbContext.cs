@@ -14,7 +14,7 @@ namespace SITE.Domain
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
-        public DbSet<Order> Order { get; set; }
+        public DbSet<Order> Orders { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
